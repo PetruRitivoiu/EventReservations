@@ -1,0 +1,20 @@
+﻿@model IEnumerable<DellChallenge.D2.Web.Models.ProductModel>
+
+@{
+    ViewData["Title"] = "View";
+}
+<h4>All Products</h4>
+<hr />
+
+@foreach (var item in Model)
+{
+    <div class="row form-group">
+        <div class="col-md-10">
+            @Html.DisplayFor(i => item.Name) - @Html.DisplayFor(i => item.Category)
+        </div>
+        <div class="col-md-2">
+            <a asp-controller="Product" asp-action="Update" asp-route-id="@item.Id">Update</a> |
+            <a asp-controller="Product" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+        </div>
+    </div>
+}
