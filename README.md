@@ -1,1 +1,1 @@
-# ASP.NET MVC sample project
+# [Uni homework] Make use of 5 design patterns while implementing an event

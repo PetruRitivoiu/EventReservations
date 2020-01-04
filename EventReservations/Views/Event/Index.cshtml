@@ -1,0 +1,20 @@
+﻿@model IEnumerable<EventReservations.Models.EventModel>
+
+@{
+    ViewData["Title"] = "View";
+}
+<h4>All events</h4>
+<hr />
+
+<div class="cards">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <b>@Html.DisplayFor(i => item.Name)</b>
+
+            <p>@Html.DisplayFor(i => item.Address)</p>
+
+            <a asp-controller="Product" asp-action="Update" asp-route-id="@item.Id">Purchase</a>
+        </div>
+    }
+</div>
