@@ -2,6 +2,71 @@
 @{
     ViewData["Title"] = "Purchase";
 }
+<style>
+    input { margin-left:25px; }
+    #email {margin-left: 55px;}
+    #phone {margin-left: 45px;}
+    form {margin-top: 30px; display:table}
+  
+</style>
+<h1>Reservation Form</h1>
 
-<h1>Purchase</h1>
-
+<div class="container py-5"
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <form>
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label for="inputFirstname">First name</label>
+                        <input type="text" class="form-control" id="inputFirstname" placeholder="First name">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="inputLastname">Last name</label>
+                        <input type="text" class="form-control" id="inputLastname" placeholder="Last name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label for="inputEmail">Email</label>
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="inputAddressLine2">Phone</label>
+                        <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="City">
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="inputStreet">Street</label>
+                        <input type="text" class="form-control" id="inputStreet" placeholder="Street">
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="inputPostalCode">Postal Code</label>
+                        <input type="text" class="form-control" id="inputPostalCode" placeholder="Postal Code">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label for="inputNoOfTickets">No Of Tickets</label>
+                        <input type="number" class="form-control" id="inputNoOfTickets" placeholder="Number Of Tickets">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="inputPayment">Payment Method</label>
+                        <div class="radio">
+                            <label class="radio-inline"><input type="radio" name="optradio" checked> Cash</label>
+                        </div>
+                        <div class="radio">
+                            <label class="radio-inline"><input type="radio" name="optradio"> Credit Card</label>
+                        </div>
+                        
+                    </div>
+                    </div>
+                    <button type="button" class="btn btn-primary px-4 float-right">Submit</button>
+</form>
+        </div>
+    </div>
+</div>
