@@ -52,7 +52,7 @@ namespace EventReservations.Controllers
         }
 
         [HttpGet]
-        public IActionResult Add()
+        public IActionResult Purchase(int id)
         {
             return View();
         }
