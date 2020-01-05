@@ -11,22 +11,21 @@ namespace EventReservations.Models
         public Currency Currency { get; set; }
         public EventType EventType { get; set; }
 
-        int maxAttendees;
-        int attendees = 0;
+        public int MaxAttendees { get; set; }
+
+        public int Attendees { get; set; } = 0;
 
         public EventModel()
         {
-            // trebuie bagat ca proprietate
-            // this.maxAttendees = maxAttendees;
         }
 
         public int Register(int nr = 1)
         {
-            this.attendees += nr;
-            return this.attendees;
+            Attendees += nr;
+            return Attendees;
         }
 
-        public bool isFull => (maxAttendees - this.attendees) > 0;
+        public bool IsFull => (MaxAttendees - Attendees) <= 0;
 
         public string GetDescription()
         {

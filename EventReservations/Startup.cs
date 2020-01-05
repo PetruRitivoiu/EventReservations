@@ -1,4 +1,6 @@
 ﻿using EventReservations.Data;
+using EventReservations.MapperFactory;
+using EventReservations.Repository;
 using EventReservations.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +32,9 @@ namespace EventReservations
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<EventReservationsDbContext, EventReservationsDbContext>();
+            services.AddScoped<CorporateEventFactory, CorporateEventFactory>();
+            services.AddScoped<PersonalEventFactory, PersonalEventFactory>();
+            services.AddScoped<IEventEntityRepository, EventEntityRepository>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {

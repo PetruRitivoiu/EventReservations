@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using EventReservations.Entities;
+using EventReservations.Models;
 
 namespace EventReservations.MapperFactory
 {
     interface EventFactory
     {
-        public Models.ConcertEvent createTeatherEvent();
+        public ConcertEvent CreateConcertEvent(EventEntity eventEntity);
 
-        public Models.TeatherEvent createConcertEvent();
+        public TeatherEvent CreateTeatherEvent(EventEntity eventEntity);
     }
 }

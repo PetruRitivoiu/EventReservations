@@ -1,21 +1,30 @@
-﻿using EventReservations.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using EventReservations.Entities;
+using EventReservations.Models;
 
 namespace EventReservations.MapperFactory
 {
     public class PersonalEventFactory : EventFactory
     {
-        TeatherEvent EventFactory.createConcertEvent()
+        public ConcertEvent CreateConcertEvent(EventEntity eventEntity) => new PersonalConcertEvent
         {
-            return new CorporateTeatherEvent();
-        }
+            Address = eventEntity.Address,
+            Currency = eventEntity.Currency,
+            EventType = eventEntity.EventType,
+            Id = eventEntity.Id,
+            MaxAttendees = eventEntity.MaxAttendees,
+            Name = eventEntity.Name,
+            Price = eventEntity.Price
+        };
 
-        ConcertEvent EventFactory.createTeatherEvent()
+        public TeatherEvent CreateTeatherEvent(EventEntity eventEntity) => new PersonalTeatherEvent
         {
-            return new PersonalConcertEvent();
-        }
+            Address = eventEntity.Address,
+            Currency = eventEntity.Currency,
+            EventType = eventEntity.EventType,
+            Id = eventEntity.Id,
+            MaxAttendees = eventEntity.MaxAttendees,
+            Name = eventEntity.Name,
+            Price = eventEntity.Price
+        };
     }
 }
