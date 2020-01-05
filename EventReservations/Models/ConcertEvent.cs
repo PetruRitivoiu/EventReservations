@@ -7,9 +7,5 @@ namespace EventReservations.Models
 {
     public class ConcertEvent : EventModel
     {
-        public ConcertEvent(int maxAttendees) : base(maxAttendees)
-        {
-
-        }
     }
 }

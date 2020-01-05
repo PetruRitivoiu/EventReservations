@@ -7,11 +7,6 @@ namespace EventReservations.Models
 {
     public class CorporateConcertEvent : ConcertEvent
     {
-        public CorporateConcertEvent(int maxAttendees) : base(maxAttendees)
-        {
-            
-        }
-
         public string type => "Corporate concert event";
     }
 }

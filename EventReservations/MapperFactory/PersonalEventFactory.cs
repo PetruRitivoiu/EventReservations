@@ -8,14 +8,14 @@ namespace EventReservations.MapperFactory
 {
     public class PersonalEventFactory : EventFactory
     {
-        public EventModel createConcertEvent()
+        TeatherEvent EventFactory.createConcertEvent()
         {
             return new CorporateTeatherEvent();
         }
 
-        public EventModel createTeatherEvent()
+        ConcertEvent EventFactory.createTeatherEvent()
         {
-            return new PersonalTeatherEvent();
+            return new PersonalConcertEvent();
         }
     }
 }

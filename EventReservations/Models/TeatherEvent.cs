@@ -7,9 +7,5 @@ namespace EventReservations.Models
 {
     public class TeatherEvent : EventModel
     {
-        public TeatherEvent(int maxAttendees) : base(maxAttendees)
-        {
-
-        }
     }
 }

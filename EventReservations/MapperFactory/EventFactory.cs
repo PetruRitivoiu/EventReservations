@@ -7,8 +7,8 @@ namespace EventReservations.MapperFactory
 {
     interface EventFactory
     {
-        public Models.EventModel createTeatherEvent();
+        public Models.ConcertEvent createTeatherEvent();
 
-        public Models.EventModel createConcertEvent();
+        public Models.TeatherEvent createConcertEvent();
     }
 }

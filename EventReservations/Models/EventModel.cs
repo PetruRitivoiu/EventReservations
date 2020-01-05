@@ -14,9 +14,10 @@ namespace EventReservations.Models
         int maxAttendees;
         int attendees = 0;
 
-        public EventModel(int maxAttendees)
+        public EventModel()
         {
-            this.maxAttendees = maxAttendees;
+            // trebuie bagat ca proprietate
+            // this.maxAttendees = maxAttendees;
         }
 
         public int Register(int nr = 1)

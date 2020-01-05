@@ -7,11 +7,6 @@ namespace EventReservations.Models
 {
     public class PersonalTeatherEvent : TeatherEvent
     {
-        public PersonalTeatherEvent(int maxAttendees) : base(maxAttendees)
-        {
-            
-        }
-
         public string type => "Personal teather event";
     }
 }
