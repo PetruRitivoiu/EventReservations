@@ -11,5 +11,7 @@ namespace EventReservations.Models
         {
             
         }
+
+        public string type => "Corporate concert event";
     }
 }

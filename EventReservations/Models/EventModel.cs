@@ -26,5 +26,10 @@ namespace EventReservations.Models
         }
 
         public bool isFull => (maxAttendees - this.attendees) > 0;
+
+        public string GetDescription()
+        {
+            return "Un eveniment";
+        }
     }
 }
