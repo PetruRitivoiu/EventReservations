@@ -29,6 +29,8 @@ namespace EventReservations
             services.AddDbContext<EventReservationsDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddScoped<EventReservationsDbContext, EventReservationsDbContext>();
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.

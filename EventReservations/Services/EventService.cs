@@ -1,20 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using EventReservations.Models;
+using System.Linq;
+using EventReservations.Data;
+using EventReservations.Entities;
 
 namespace EventReservations.Services
 {
     public class EventService : IEventService
     {
-        public IEnumerable<EventModel> GetAll()
+        private readonly EventReservationsDbContext _context;
+
+        public EventService(EventReservationsDbContext context)
         {
-            return null;
+            _context = context;
         }
 
-        public EventModel GetById(Guid id)
+        public IEnumerable<EventEntity> GetAll()
         {
-            // come here later and fix this shit
-            return null;
+            return _context.Events.ToList();
+        }
+
+        public EventEntity GetById(int id)
+        {
+            return _context.Events.Find(id);
         }
     }
 }

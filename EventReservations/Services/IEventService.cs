@@ -1,4 +1,4 @@
-﻿using EventReservations.Models;
+﻿using EventReservations.Entities;
 using System;
 using System.Collections.Generic;
 
@@ -6,7 +6,7 @@ namespace EventReservations.Services
 {
     public interface IEventService
     {
-        IEnumerable<EventModel> GetAll();
-        EventModel GetById(Guid id);
+        IEnumerable<EventEntity> GetAll();
+        EventEntity GetById(int id);
     }
 }
