@@ -10,5 +10,6 @@ namespace EventReservations.Entities
         public double Price { get; set; }
         public Currency Currency { get; set; }
         public EventType EventType { get; set; }
+        public AttendenceType AttendenceType { get; set; }
     }
 }
