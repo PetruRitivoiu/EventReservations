@@ -26,6 +26,7 @@ namespace EventReservations
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IEventService, EventService>();
+            services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<IDbInitializer, DbInitializer>();
 
             services.AddDbContext<EventReservationsDbContext>(options =>
@@ -35,6 +36,8 @@ namespace EventReservations
             services.AddScoped<CorporateEventFactory, CorporateEventFactory>();
             services.AddScoped<PersonalEventFactory, PersonalEventFactory>();
             services.AddScoped<IEventEntityRepository, EventEntityRepository>();
+            services.AddScoped<IOrderEntityRepository, OrderEntityRepository>();
+            services.AddScoped<IPurchaseStrategyService, PurchaseStrategyService>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {

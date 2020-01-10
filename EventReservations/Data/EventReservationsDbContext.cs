@@ -6,6 +6,7 @@ namespace EventReservations.Data
     public class EventReservationsDbContext : DbContext
     {
         public DbSet<EventEntity> Events { get; set; }
+        public DbSet<OrderEntity> Orders { get; set; }
 
         public EventReservationsDbContext(DbContextOptions<EventReservationsDbContext> options) 
             : base(options) { }

@@ -1,6 +1,6 @@
 ﻿namespace EventReservations.Models
 {
-    public class PersonalConcertEvent : ConcertEvent
+    public class PersonalConcertEventModel : ConcertEventModel
     {
         public string Type => "Personal concert event";
     }

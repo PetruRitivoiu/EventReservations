@@ -1,0 +1,32 @@
+﻿@model EventReservations.Models.OrderModel
+
+@{
+    ViewData["Title"] = "PurchaseCompleted";
+}
+
+<h1>PurchaseCompleted</h1>
+
+<hr />
+
+<h3>Order details</h3>
+<div class="container">
+    <p>First name:  @Model.FirstName</p>
+    <p>Last name: @Model.LastName</p>
+    <p>City: @Model.Email</p>
+    <p>Phone: @Model.Phone</p>
+    <p>City: @Model.City</p>
+    <p>Street: @Model.Street</p>
+    <p>PostalCode: @Model.PostalCode</p>
+    <p>Number of tickets: @Model.NumberOfTickets</p>
+    <p>Payment method: @Model.PaymentMethod</p>
+    <p>Purchase date: @Model.PurchaseDate</p>
+
+</div>
+
+<h3>Order status</h3>
+<div class="container">
+    <p>Purchase status: @Model.Success</p>
+    <p>Purchase details: @Model.Message</p>
+</div>
+
+

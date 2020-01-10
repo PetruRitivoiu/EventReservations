@@ -5,7 +5,7 @@ namespace EventReservations.MapperFactory
 {
     public class PersonalEventFactory : EventFactory
     {
-        public ConcertEvent CreateConcertEvent(EventEntity eventEntity) => new PersonalConcertEvent
+        public ConcertEventModel CreateConcertEvent(EventEntity eventEntity) => new PersonalConcertEventModel
         {
             Address = eventEntity.Address,
             Currency = eventEntity.Currency,
@@ -16,7 +16,7 @@ namespace EventReservations.MapperFactory
             Price = eventEntity.Price
         };
 
-        public TeatherEvent CreateTeatherEvent(EventEntity eventEntity) => new PersonalTeatherEvent
+        public TeatherEventModel CreateTeatherEvent(EventEntity eventEntity) => new PersonalTeatherEventModel
         {
             Address = eventEntity.Address,
             Currency = eventEntity.Currency,

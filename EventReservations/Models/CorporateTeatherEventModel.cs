@@ -1,6 +1,6 @@
 ﻿namespace EventReservations.Models
 {
-    public class CorporateTeatherEvent : TeatherEvent
+    public class CorporateTeatherEventModel : TeatherEventModel
     {
         public string Type => "Corporate teather event";
     }

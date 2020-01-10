@@ -1,6 +1,6 @@
 ﻿namespace EventReservations.Models
 {
-    public class CorporateConcertEvent : ConcertEvent
+    public class CorporateConcertEventModel : ConcertEventModel
     {
         public string Type => "Corporate concert event";
     }

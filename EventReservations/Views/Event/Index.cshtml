@@ -16,7 +16,7 @@
                 <h5 class="card-title">@Html.DisplayFor(i => item.Name)</h5>
                 <p class="card-text">@Html.DisplayFor(i => item.Address)</p>
 
-                <a class="btn btn-primary" style="position:absolute; bottom: 10px; width: 120px; align-items:ce" asp-controller="Event" asp-action="Purchase" asp-route-id="@item.Id">Purchase</a>
+                <a class="btn btn-primary" style="position:absolute; bottom: 10px; width: 120px; align-items:center" asp-controller="Event" asp-action="Purchase" asp-route-id="@item.Id">Purchase</a>
             </div>
         </div>
     }

@@ -1,6 +1,6 @@
 ﻿namespace EventReservations.Models
 {
-    public class TeatherEvent : EventModel
+    public class TeatherEventModel : EventModel
     {
     }
 }
