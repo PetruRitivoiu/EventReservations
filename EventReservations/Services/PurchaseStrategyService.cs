@@ -13,7 +13,7 @@ namespace EventReservations.Services
 
         public PurchaseStrategyService(IOrderEntityRepository orderEntityRepository)
         {
-            purchaseContext = new PurchaseContext();
+            purchaseContext = PurchaseContext.Instance;
             _orderEntityRepository = orderEntityRepository;
         }
 

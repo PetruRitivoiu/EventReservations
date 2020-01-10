@@ -6,11 +6,10 @@ namespace EventReservations.Services.PurchaseStrategy
 {
     public class PurchaseContext
     {
-        private IPurchaseStrategy PurchaseStrategy { get; set; }
+        private static PurchaseContext instance;
+        private static object instanceLock;
 
-        private Dictionary<PaymentMethod, IPurchaseStrategy> PurchaseStrategies { get; set; }
-
-        public PurchaseContext()
+        private PurchaseContext()
         {
             PurchaseStrategies = new Dictionary<PaymentMethod, IPurchaseStrategy>()
             {
@@ -18,6 +17,18 @@ namespace EventReservations.Services.PurchaseStrategy
                 { PaymentMethod.CreditCard, new CreditCardPurchaseStrategy() }
             };
         }
+
+        public static PurchaseContext Instance
+        {
+            get
+            {
+                return instance ?? (instance = new PurchaseContext());
+            }
+        }
+
+        private IPurchaseStrategy PurchaseStrategy { get; set; }
+
+        private Dictionary<PaymentMethod, IPurchaseStrategy> PurchaseStrategies { get; set; }
 
         public PurchaseContext SetStrategy(PaymentMethod type)
         {
