@@ -11,6 +11,8 @@ namespace EventReservations.Services.PurchaseStrategy
 
         private PurchaseContext()
         {
+            instanceLock = new object();
+
             PurchaseStrategies = new Dictionary<PaymentMethod, IPurchaseStrategy>()
             {
                 { PaymentMethod.Cash, new CashPurchaseStrategy() },
@@ -22,7 +24,10 @@ namespace EventReservations.Services.PurchaseStrategy
         {
             get
             {
-                return instance ?? (instance = new PurchaseContext());
+                lock (instanceLock)
+                {
+                    return instance ?? (instance = new PurchaseContext());
+                }
             }
         }
 
